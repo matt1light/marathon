@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 
 export const Pool = (props) => {
-    const {asset, logo, weeks, day, usdcAmount, assetAmount, apy} = props;
+    const {asset, logo, weeks, day, usdcAmount, assetAmount, apy, depositsEnabled, approved} = props;
 
     return (
         <Card>
@@ -48,14 +48,31 @@ export const Pool = (props) => {
                         {assetAmount}
                     </div>
                 </div>
-                {/** Withdraw Early */}
+                {/** Buttons */}
                 <div className="flex flex-row justify-center">
-                    <button className="bg-indigo-500 rounded-2xl px-4 py-2 text-white hover:bg-indigo-400">
-                        WITHDRAW
-                    </button>
+                    <PoolButtons depositsEnabled={depositsEnabled} approved={approved}/>
                 </div>
             </div>
         </Card>
+    )
+}
+
+const PoolButtons = (props) => {
+    const {depositsEnabled, approved} = props;
+
+    return (
+        depositsEnabled ?
+        <div className="space-x-4">
+            <button className={`bg-indigo-500 rounded-2xl px-4 py-2 text-white hover:bg-indigo-400 ${approved ? 'opacity-50 cursor-not-allowed' : ''}`}>
+                APPROVE
+            </button>
+            <button className={`bg-indigo-500 rounded-2xl px-4 py-2 text-white hover:bg-indigo-400 ${approved ? '' : 'opacity-50 cursor-not-allowed'}`}>
+                DEPOSIT
+            </button>
+        </div> : 
+        <button className="bg-indigo-500 rounded-2xl px-4 py-2 text-white hover:bg-indigo-400">
+            WITHDRAW
+        </button>
     )
 }
 
