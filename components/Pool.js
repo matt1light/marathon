@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 
 export const Pool = (props) => {
-    const {asset, logo, weeks, day, usdcAmount, assetAmount, apy, depositsEnabled, approved, assetPrice} = props;
+    const {asset, logo, weeks, day, usdcAmount, assetAmount, apy, depositsEnabled, approved, assetPrice, tvl} = props;
 
     return (
         <Card>
@@ -28,6 +28,14 @@ export const Pool = (props) => {
                     </div>
                     <div>
                         {apy}%
+                    </div>
+                </div>
+                <div className="flex flex-row justify-between">
+                    <div>
+                        TVL:
+                    </div>
+                    <div>
+                        ${tvl}
                     </div>
                 </div>
                 {/** Stablecoin amount */}

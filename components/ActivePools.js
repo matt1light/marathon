@@ -12,7 +12,8 @@ const activePools = [
         apy: 5,
         assetAmount: 1,
         assetPrice: 4000,
-        usdcAmount: 1000
+        usdcAmount: 1000,
+        tvl: 100000
     },
     {
         asset: 'BTC',
@@ -24,7 +25,9 @@ const activePools = [
         apy: 15,
         assetPrice: 50000,
         assetAmount: 0.001,
-        usdcAmount: 1000
+        usdcAmount: 1000,
+        tvl: 100000
+
     },
     {
         asset: 'ETH',
@@ -36,7 +39,8 @@ const activePools = [
         apy: 12,
         assetAmount: 0.5,
         assetPrice: 4000,
-        usdcAmount: 1000
+        usdcAmount: 1000,
+        tvl: 100000
     },
 ]
 

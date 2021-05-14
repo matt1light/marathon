@@ -37,16 +37,16 @@ const AssetBreakdown = () => {
                     },
                 ].map((asset) => {
                     return <>
-                        <div>
+                        <div key={asset+"value"}>
                             ${asset.price*asset.amount}
                         </div>
-                        <div>
+                        <div key={asset+"asset"}>
                             {asset.asset}
                         </div>
-                        <div>
+                        <div key={asset+"amount"}>
                             {asset.amount}
                         </div>
-                        <div>
+                        <div key={asset+"price"}>
                             ${asset.price}
                         </div>
                     </>
