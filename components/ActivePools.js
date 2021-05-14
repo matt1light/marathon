@@ -8,7 +8,11 @@ const activePools = [
         weeks: 5,
         day: 'Monday',
         depositsEnabled: true,
-        approved: true
+        approved: true,
+        apy: 5,
+        assetAmount: 1,
+        assetPrice: 4000,
+        usdcAmount: 1000
     },
     {
         asset: 'BTC',
@@ -16,7 +20,11 @@ const activePools = [
         weeks: 10,
         day: 'Tuesday',
         depositsEnabled: false,
-        approved: true
+        approved: true,
+        apy: 15,
+        assetPrice: 50000,
+        assetAmount: 0.001,
+        usdcAmount: 1000
     },
     {
         asset: 'ETH',
@@ -24,7 +32,11 @@ const activePools = [
         weeks: 2,
         day: 'Sunday',
         depositsEnabled: true,
-        approved: false
+        approved: false,
+        apy: 12,
+        assetAmount: 0.5,
+        assetPrice: 4000,
+        usdcAmount: 1000
     },
 ]
 
@@ -32,15 +44,7 @@ export const ActivePools = () => {
     return activePools.map((asset) => {
         return <Pool
             key={asset}
-            asset={asset.asset}
-            logo={asset.logo}
-            weeks={asset.weeks}
-            day={asset.day}
-            usdcAmount={0}
-            assetAmount={0}
-            apy={5}
-            depositsEnabled={asset.depositsEnabled}
-            approved={asset.approved}
+            {...asset}
         />
     })
 }

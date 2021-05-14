@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 
 export const Pool = (props) => {
-    const {asset, logo, weeks, day, usdcAmount, assetAmount, apy, depositsEnabled, approved} = props;
+    const {asset, logo, weeks, day, usdcAmount, assetAmount, apy, depositsEnabled, approved, assetPrice} = props;
 
     return (
         <Card>
@@ -31,23 +31,9 @@ export const Pool = (props) => {
                     </div>
                 </div>
                 {/** Stablecoin amount */}
-                <div className="flex flex-col">
-                    <div className="text-sm text-indigo-500">
-                        USDC BALANCE
-                    </div>
-                    <div className="text-2xl">
-                        {usdcAmount}
-                    </div>
-                </div>
+                <Balance assetName="USDC" assetAmount={usdcAmount} assetPrice={1.01}/>
                 {/** Asset amount */}
-                <div className="flex flex-col">
-                    <div className="text-sm text-indigo-500">
-                        {asset} BALANCE
-                    </div>
-                    <div className="text-2xl">
-                        {assetAmount}
-                    </div>
-                </div>
+                <Balance assetName="USDC" assetAmount={assetAmount} assetPrice={assetPrice}/>
                 {/** Buttons */}
                 <div className="flex flex-row justify-center">
                     <PoolButtons depositsEnabled={depositsEnabled} approved={approved}/>
@@ -55,6 +41,22 @@ export const Pool = (props) => {
             </div>
         </Card>
     )
+}
+
+const Balance = (props) => {
+    const {assetName, assetAmount, assetPrice} = props;
+
+    return <div className="flex flex-col">
+        <div className="text-sm text-indigo-500">
+            {assetName} BALANCE
+        </div>
+        <div className="text-2xl">
+            {assetAmount}
+        </div>
+        <div className="text-xs text-gray-400">
+            ${assetPrice*assetAmount}
+        </div>
+    </div>
 }
 
 const PoolButtons = (props) => {
