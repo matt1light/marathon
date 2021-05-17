@@ -1,9 +1,9 @@
 import React from 'react';
-import Card from './Card';
+import TopCard from './TopCard';
 export const Warning = () => {
-    return <Card className="max-w-2xl m-auto">
+    return <TopCard>
         <p className="text-sm">Using Smart Contracts, Tokens, and Crypto is always a risk. DYOR before investing.</p>
-    </Card>
+    </TopCard>
 }
 
 export default Warning;
