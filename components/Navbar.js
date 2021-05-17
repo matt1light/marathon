@@ -12,7 +12,7 @@ export const Navbar = () => {
                         </svg>
                     </button>
                     <button className="h-8 w-8 rounded-full">
-                        <img className="h-7 w-7" src={"/fda-runner.svg"} alt="marathon logo"/>
+                        <img className="h-7 w-7" src={"/turtle.png"} alt="turtle logo"/>
                     </button>
                 </div>
                 <button className="rounded-full bg-indigo-500 px-5 py-1 text-white flex-row justify-center items-center hover:bg-indigo-400">
@@ -27,7 +27,7 @@ export const Navbar = () => {
                         </svg>
                     </button>
                     <button className="h-8 w-8 rounded-full">
-                        <img className="h-7 w-7" src={"/fda-runner.svg"} alt="marathon logo"/>
+                        <img className="h-7 w-7" src={"/turtle.png"} alt="turtle logo"/>
                     </button>
                 </div>
                 <button className="rounded-full bg-indigo-500 px-5 py-1 text-white flex-row justify-center items-center hover:bg-indigo-400">
