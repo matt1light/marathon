@@ -1,5 +1,5 @@
 import React from 'react';
-import TopCard from './TopCard';
+import TopCard from '../Cards/TopCard';
 export const Warning = () => {
     return <TopCard>
         <p className="text-sm">Using Smart Contracts, Tokens, and Crypto is always a risk. DYOR before investing.</p>

@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import Warning from '../components/Warning';
+import Warning from '../components/dashboard/Warning';
 import AssetBreakdown from '../components/dashboard/AssetBreakdown';
 import Summary from '../components/dashboard/Summary';
-import ActivePools from '../components/ActivePools';
-import Body from '../components/Body';
-import CardGrid from '../components/CardGrid';
+import ActivePools from '../components/Pools/ActivePools';
+import Body from '../components/Layout/Body';
+import CardGrid from '../components/Cards/CardGrid';
 
 export const Dashboard = () => {
     return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './Card';
+import Card from '../Cards/Card';
 
 export const Pool = (props) => {
     const {asset, logo, weeks, day, usdcAmount, assetAmount, apy, depositsEnabled, approved, assetPrice, tvl} = props;
