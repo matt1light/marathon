@@ -15,7 +15,7 @@ export const Navbar = () => {
                         <img className="h-7 w-7" src={"/turtle.png"} alt="turtle logo"/>
                     </button>
                 </div>
-                <button className="rounded-full bg-indigo-500 px-5 py-1 text-white flex-row justify-center items-center hover:bg-indigo-400">
+                <button className="rounded-full bg-green-700 px-5 py-1 text-white flex-row justify-center items-center hover:bg-green-600">
                     CONNECT
                 </button>
             </div>
@@ -30,7 +30,7 @@ export const Navbar = () => {
                         <img className="h-7 w-7" src={"/turtle.png"} alt="turtle logo"/>
                     </button>
                 </div>
-                <button className="rounded-full bg-indigo-500 px-5 py-1 text-white flex-row justify-center items-center hover:bg-indigo-400">
+                <button className="rounded-full bg-green-700 px-5 py-1 text-white flex-row justify-center items-center hover:bg-green-600">
                     CONNECT
                 </button>
             </div>

@@ -1,4 +1,5 @@
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 export const Body = (props) => {
     const {children} = props;
@@ -13,9 +14,7 @@ export const Body = (props) => {
         </div>
 
         {/** Footer */}
-        <div className="bg-blue-500">
-            Footer
-        </div>
+        <Footer/>
     </body>
 }
 

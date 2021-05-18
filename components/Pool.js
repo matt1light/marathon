@@ -41,7 +41,7 @@ export const Pool = (props) => {
                 {/** Stablecoin amount */}
                 <Balance assetName="USDC" assetAmount={usdcAmount} assetPrice={1.01}/>
                 {/** Asset amount */}
-                <Balance assetName="USDC" assetAmount={assetAmount} assetPrice={assetPrice}/>
+                <Balance assetName={asset} assetAmount={assetAmount} assetPrice={assetPrice}/>
                 {/** Buttons */}
                 <div className="flex flex-row justify-center">
                     <PoolButtons depositsEnabled={depositsEnabled} approved={approved}/>
@@ -55,7 +55,7 @@ const Balance = (props) => {
     const {assetName, assetAmount, assetPrice} = props;
 
     return <div className="flex flex-col">
-        <div className="text-sm text-indigo-500">
+        <div className="text-sm text-green-600 font-semibold">
             {assetName} BALANCE
         </div>
         <div className="text-2xl">
@@ -73,14 +73,14 @@ const PoolButtons = (props) => {
     return (
         depositsEnabled ?
         <div className="space-x-4">
-            <button className={`bg-indigo-500 rounded-2xl px-4 py-2 text-white hover:bg-indigo-400 ${approved ? 'opacity-50 cursor-not-allowed' : ''}`}>
+            <button className={`bg-green-700 rounded-2xl px-4 py-2 text-white hover:bg-green-600 ${approved ? 'opacity-50 cursor-not-allowed' : ''}`}>
                 APPROVE
             </button>
-            <button className={`bg-indigo-500 rounded-2xl px-4 py-2 text-white hover:bg-indigo-400 ${approved ? '' : 'opacity-50 cursor-not-allowed'}`}>
+            <button className={`bg-green-700 rounded-2xl px-4 py-2 text-white hover:bg-green-600 ${approved ? '' : 'opacity-50 cursor-not-allowed'}`}>
                 DEPOSIT
             </button>
         </div> : 
-        <button className="bg-indigo-500 rounded-2xl px-4 py-2 text-white hover:bg-indigo-400">
+        <button className="bg-green-700 rounded-2xl px-4 py-2 text-white hover:bg-green-600">
             WITHDRAW
         </button>
     )

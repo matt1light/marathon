@@ -21,9 +21,6 @@ export const Pools = () => {
                 <ActivePools/>
             </CardGrid>
         </Body>
-        <div>
-            <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-        </div>
     </div>
 }
 
@@ -138,7 +135,7 @@ const SearchBar = (props) => {
         </div>
         <div className="flex flex-col justify-center sm:w-1/4">
             <button
-                className="bg-indigo-500 rounded-xl px-4 py-2 text-white m-auto"
+                className="bg-green-700 rounded-xl px-4 py-2 text-white m-auto hover:bg-green-600"
                 onClick={handleClearFilters}
             >
                 Clear Filters
