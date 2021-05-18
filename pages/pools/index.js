@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import ActivePools from '../../components/ActivePools';
-import Body from '../../components/Body';
-import CardGrid from '../../components/CardGrid';
 import { useState } from 'react';
-import TopCard from '../../components/TopCard';
+import ActivePools from '../../components/Pools/ActivePools';
+import Body from '../../components/Layout/Body';
+import CardGrid from '../../components/Cards/CardGrid';
+import TopCard from '../../components/Cards/TopCard';
 
 export const Pools = () => {
     return <div>
