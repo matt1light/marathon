@@ -50,7 +50,7 @@ export const Navbar = () => {
                 </button>
             </div>
             <div className="hidden md:flex h-20 top-0 bg-gray-100 fixed w-full justify-center">
-                <div className="px-6 py-4 flex flex-row justify-between items-center container">
+                <div className="px-6 py-4 flex flex-row justify-between items-center container w-full">
                     <div className="flex flex-row justify-start space-x-2">
                         {/* <button className="h-8 w-8 rounded-full hover:bg-gray-300" onClick={handleOpenDrawer}>
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 m-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
